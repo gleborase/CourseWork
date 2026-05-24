@@ -1,0 +1,47 @@
+﻿<Window x:Class="SchoolApp.View.AnalyticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Аналитика" Height="550" Width="700"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Выбор запроса -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Запрос:" VerticalAlignment="Center" 
+                       Margin="0,0,10,0" FontSize="14"/>
+            <ComboBox x:Name="QueryComboBox" Width="350" Height="28"
+                      SelectionChanged="QueryComboBox_SelectionChanged">
+                <ComboBoxItem Content="Успеваемость по заданному предмету"/>
+                <ComboBoxItem Content="Количество неуспевающих учеников по всем классам"/>
+                <ComboBoxItem Content="У какого учителя самая низкая успеваемость"/>
+                <ComboBoxItem Content="Средняя оценка по всем предметам в каждом классе"/>
+                <ComboBoxItem Content="Класс с самой высокой успеваемостью"/>
+                <ComboBoxItem Content="Класс с самой низкой успеваемостью"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Поле для ввода предмета и кнопка -->
+        <StackPanel Grid.Row="1" x:Name="SubjectPanel" Orientation="Horizontal" 
+                    Visibility="Collapsed">
+            <TextBlock Text="Предмет:" VerticalAlignment="Center" 
+                       Margin="0,0,10,0" FontSize="14"/>
+            <TextBox x:Name="SubjectTextBox" Width="200" Height="28"/>
+            <Button Content="Показать" Width="100" Height="28" 
+                    Margin="10,0,0,0" Click="ShowButton_Click"/>
+        </StackPanel>
+
+        <!-- Результаты -->
+        <Grid Grid.Row="2">
+            <DataGrid x:Name="ResultGrid" AutoGenerateColumns="True" 
+                      IsReadOnly="True" Visibility="Collapsed"/>
+            <TextBlock x:Name="ResultText" FontSize="14" 
+                       TextWrapping="Wrap" Visibility="Collapsed"/>
+        </Grid>
+    </Grid>
+</Window>

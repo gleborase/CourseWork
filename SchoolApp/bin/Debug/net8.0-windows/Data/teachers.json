@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "FullName": "\u041F\u0430\u043F\u0438\u0436 \u041F. \u041F.",
+    "Subject": "\u041A\u0421",
+    "ClassroomNumber": 36
+  },
+  {
+    "Id": 2,
+    "FullName": "\u0413\u0443\u0446\u0443 \u041B. \u041C.",
+    "Subject": "\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438",
+    "ClassroomNumber": 31
+  }
+]
