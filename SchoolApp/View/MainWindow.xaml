@@ -1,0 +1,126 @@
+﻿<Window x:Class="SchoolApp.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Приложение для завуча" Height="500" Width="650"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="#F0F4F8">
+    
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <Border Grid.Row="0" Background="#FF821409" CornerRadius="10" 
+                Padding="20" Margin="0,0,0,20">
+            <StackPanel>
+                <TextBlock Text="Электронный журнал" 
+                           FontSize="26" FontWeight="Bold" 
+                           Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock Text="Управление учителями, учениками и успеваемостью" 
+                           FontSize="18" Foreground="#BEE3F8" 
+                           HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Кнопки сеткой 2x2 -->
+        <UniformGrid Grid.Row="1" Columns="2" Rows="2"
+                     HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Button Margin="10" Background="White" BorderBrush="#CBD5E0"
+                    BorderThickness="1" Cursor="Hand"
+                    Click="TeachersButton_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10" Padding="18">
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="👨‍🏫" FontSize="42" 
+                                           HorizontalAlignment="Center"/>
+                                <TextBlock Text="Учителя" FontSize="22" 
+                                           FontWeight="SemiBold" 
+                                           HorizontalAlignment="Center" 
+                                           Margin="0,8,0,0"/>
+                                
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Margin="10" Background="White" BorderBrush="#CBD5E0"
+                    BorderThickness="1" Cursor="Hand"
+                    Click="StudentsButton_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10" Padding="18">
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="🎒" FontSize="42" 
+                                           HorizontalAlignment="Center"/>
+                                <TextBlock Text="Ученики" FontSize="22" 
+                                           FontWeight="SemiBold" 
+                                           HorizontalAlignment="Center" 
+                                           Margin="0,8,0,0"/>
+                                
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Margin="10" Background="White" BorderBrush="#CBD5E0"
+                    BorderThickness="1" Cursor="Hand"
+                    Click="PerformanceButton_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10" Padding="16" Cursor="">
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="📊" FontSize="42" 
+                                           HorizontalAlignment="Center"/>
+                                <TextBlock Text="Успеваемость" FontSize="22" 
+                                           FontWeight="SemiBold" 
+                                           HorizontalAlignment="Center" 
+                                           Margin="0,8,0,0"/>
+                               
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Margin="10" Background="White" BorderBrush="#CBD5E0"
+                    BorderThickness="1" Cursor="Hand"
+                    Click="AnalyticsButton_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10" Padding="16">
+                            <StackPanel VerticalAlignment="Center" Cursor="">
+                                <TextBlock Text="📈" FontSize="42" 
+                                           HorizontalAlignment="Center" Cursor=""/>
+                                <TextBlock Text="Аналитика" FontSize="22" 
+                                           FontWeight="SemiBold" 
+                                           HorizontalAlignment="Center" 
+                                           Margin="0,8,0,0" Cursor=""/>
+                                
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </UniformGrid>
+    </Grid>
+</Window>
